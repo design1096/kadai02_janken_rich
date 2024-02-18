@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/game.js" charset="utf-8"></script>
+    <script src="js/modal.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleRP.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <title>GAME</title>    
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="wrapper">
+        <!-- ヘッダー -->
+        <header>
+            <a id="openGameRulesModal">
+                <h1 id="title">CHOOSE YOUR CARD</h1>
+            </a>
+            <!-- GAME RULES モーダルエリア -->
+            <section id="gameRulesModal" class="modalArea">
+                <div id="modalBg1" class="modalBg"></div>
+                <div class="modalWrapper">
+                <div class="modalContents">
+                    <p class="modalTitle">GAME RULES</p>
+                    <ul class="modalText">
+                        <li>1, If you WIN, you GET 1 coin.</li>
+                        <li>2, If you LOSE, you LOSE 1 coin.</li>
+                        <li>3, If you WIN twice in a row, you GET 2 coins.</li>
+                        <li>4, If you GET 15 coins, this game is CLEARED.</li>
+                        <li>5, If you LOSE 3 times in a row, this game is OVER.</li>
+                    </ul>
+                </div>
+                <div id="closeGameRulesModal" class="closeModal">
+                    <span class="closeIcon">×</span>
+                </div>
+                </div>
+            </section>
+            <!-- GAME OVER モーダルエリア -->
+            <section id="gameOverModal" class="modalArea">
+                <div id="modalBg2" class="modalBg"></div>
+                <div class="modalWrapper">
+                    <div class="modalContents">
+                        <p class="gameOverModalTitle">GAME OVER</p>
+                    </div>
+                    <div id="closeGameOverModal" class="closeModal">
+                        <span class="closeIcon">×</span>
+                    </div>
+                </div>
+            </section>
+            <!-- GAME CLEAR モーダルエリア -->
+            <section id="gameClearedModal" class="modalArea">
+                <div id="modalBg3" class="modalBg"></div>
+                <div class="modalWrapper">
+                    <div class="modalContents">
+                        <p class="gameOverModalTitle gameClearedModalTitle">GAME CLEAR</p>
+                    </div>
+                    <div id="closeGameClearedModal" class="closeModal">
+                        <span class="closeIcon">×</span>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <!-- メイン -->
+        <main>
+            <!-- 選択マークエリア -->
+            <div class="selected_area">
+                <div class="selected_item1">
+                    <img src="img/selected.png" id="selected_rock" class="selected_img hidden_item">
+                </div>
+                <div class="selected_item2">
+                    <img src="img/selected.png" id="selected_paper" class="selected_img hidden_item">
+                </div>
+                <div class="selected_item3">
+                    <img src="img/selected.png" id="selected_scissors" class="selected_img hidden_item">
+                </div>
+            </div>
+            <!-- カード選択エリア -->
+            <div id="card_total">
+                <!-- 岩のカード -->
+                <a id="rock" onclick="rockCardClick()">
+                    <div class="card_shadow">
+                        <div class="card_item">
+                            <!-- カードマークエリア -->
+                            <div class="card_mark">R</div>
+                            <div id="circle"></div>
+                            <!-- カードイメージ -->
+                            <div class="card_img_area">
+                                <img src="img/rock.png" class="card_img">
+                            </div>
+                            <!-- カードテキスト -->
+                            <div class="card_name">ROCK</div>
+                            <div class="card_text">This card can beat the scissors card.</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- 紙のカード -->
+                <a id="paper" onclick="paperCardClick()">
+                    <div class="card_shadow">
+                        <div class="card_item">
+                            <!-- カードマークエリア -->
+                            <div class="card_mark">P</div>
+                            <div id="square"></div>
+                            <!-- カードイメージ -->
+                            <div class="card_img_area">
+                                <img src="img/paper.png" class="card_img">
+                            </div>
+                            <!-- カードテキスト -->
+                            <div class="card_name">PAPER</div>
+                            <div class="card_text">This card can beat the rock card.</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- ハサミのカード -->
+                <a id="scissors" onclick="sissorsCardClick()">
+                    <div class="card_shadow">
+                        <div class="card_item">
+                            <!-- カードマークエリア -->
+                            <div class="card_mark">S</div>
+                            <div id="triangle"></div>
+                            <!-- カードイメージ -->
+                            <div class="card_img_area">
+                                <img src="img/scissors.png" class="card_img">
+                            </div>
+                            <!-- カードテキスト -->
+                            <div class="card_name">SCISSORS</div>
+                            <div class="card_text">This card can beat the paper card.</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- 下矢印 -->
+            <div id="arrow_total">
+                <a href="#resula_area" class="arrow_u"></a>
+            </div>
+            <!-- 結果エリア -->
+            <div id="result_total">
+                <!-- 手のイラスト -->
+                <div>
+                    <img src="img/hand.png" class="hand_img">
+                </div>
+                <!-- 結果 -->
+                <div id="resula_area">
+                    <div id="opponent">
+                        <p id="opponent_title">OPPONENT'S SELECTED CARD</p>
+                        <p id="opponent_card" class="result_text"></p>
+                    </div>
+                    <div id="result">
+                        <p id="result_title">VICTORY OR DEFEAT OR DRAW</p>
+                        <p id="judgment" class="result_text"></p>
+                    </div>
+                </div>
+                <!-- コイン -->
+                <div id="coin_area">
+                    <div id="coin_title">COINS YOU EARNED</div>
+                    <table id="coin_table">
+                        <tbody>
+                            <tr class="coin_tb_tr">
+                                <td class="coin_tb_td"><div id="cell1" class="coin hidden_item"></div></td>
+                                <td class="coin_tb_td"><div id="cell2" class="coin hidden_item"></div></td>
+                                <td class="coin_tb_td"><div id="cell3" class="coin hidden_item"></div></td>
+                                <td class="coin_tb_td"><div id="cell4" class="coin hidden_item"></div></td>
+                                <td class="coin_tb_td"><div id="cell5" class="coin hidden_item"></div></td>
+                            </tr>
+                            <tr class="coin_tb_tr">
+                                <td class="coin_tb_td"><div id="cell6" class="coin hidden_item"></div></td>
+                                <td class="coin_tb_td"><div id="cell7" class="coin hidden_item"></div></td>
+                                <td class="coin_tb_td"><div id="cell8" class="coin hidden_item"></div></td>
+                                <td class="coin_tb_td"><div id="cell9" class="coin hidden_item"></div></td>
+                                <td class="coin_tb_td"><div id="cell10" class="coin hidden_item"></div></td>
+                            </tr>
+                            <tr class="coin_tb_tr">
+                                <td class="coin_tb_td"><div id="cell11" class="coin hidden_item"></div></td>
+                                <td class="coin_tb_td"><div id="cell12" class="coin hidden_item"></div></td>
+                                <td class="coin_tb_td"><div id="cell13" class="coin hidden_item"></div></td>
+                                <td class="coin_tb_td"><div id="cell14" class="coin hidden_item"></div></td>
+                                <td class="coin_tb_td"><div id="cell15" class="coin hidden_item"></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- コイン枚数 -->
+                    <div id="coin_number" class="coin_text"></div>
+                    <p id="conti_result" class="coin_text"></p>
+                </div>
+            </div>
+        </main>
+        <!-- フッター -->
+        <footer>
+            <p id="footer_text">copyrights 2024 CHOOSE YOUR CARD All RIghts Reserved.</p>
+        </footer>
+    </div>
+    <!-- particles.js -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/animation.js"></script>
+</body>
+</html>

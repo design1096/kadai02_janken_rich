@@ -1,0 +1,311 @@
+/* カラーパレット
+["#5e4a43", "#9e7353", "#d7c3a2", "#ced9d5", "#ebf0ec"] */
+
+body {
+    background-color: #5e4a43;
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    padding: 0 5% 0 5%;
+}
+
+footer {
+    background-color: #473934;
+    text-align: center;
+}
+
+a {
+    cursor: pointer;
+}
+
+/* id */
+#title {
+    color: #d7c3a2;
+    font-family: "palomino-sans-one", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    text-align: center;
+    letter-spacing: 8px;
+    margin: 3% 0 3% 0;
+}
+
+#card_total {
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 3.8% 0;
+}
+
+#result_total {
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#arrow_total {
+    text-align: center;
+    margin: 0 0 8% 0;
+}
+
+#circle {
+    background: #ced9d5;
+    border-radius: 50%;
+    width: 2vw;
+    height: 2vw;
+    margin: 0 0 5% 3%;
+}
+
+#square {
+    background: #ced9d5;
+    width: 2vw;
+    height: 2vw;
+    margin: 0 0 5% 3%;
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-left: 1.2vw solid transparent;
+    border-right: 1.2vw solid transparent;
+    border-bottom: 2.4vw solid #ced9d5;
+    margin: 0 0 5% 3%;
+}
+
+#resula_area {
+    width: 32%;
+    text-align: center;
+    margin: 0 0 4.3% 0;
+}
+
+#coin_area {
+    width: 32%;
+    text-align: center;
+    margin: 0 0 4.3% 0;
+}
+
+#opponent {
+    color: #d7c3a2;
+    font-family: "palomino-sans-one", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+
+#opponent_title {
+    margin-bottom: 5%;
+}
+
+#opponent_card {
+    background-color: #ebf0ec;
+    width: 100%;
+    height: 4.5vw;
+    margin-bottom: 8%;
+    padding: 4%;
+}
+
+#result {
+    color: #d7c3a2;
+    font-family: "palomino-sans-one", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+
+#result_title {
+    margin-bottom: 5%;
+}
+
+#judgment {
+    background-color: #ebf0ec;
+    width: 100%;
+    height: 4.5vw;
+    padding: 4%;
+}
+
+#coin_title {
+    color: #d7c3a2;
+    font-family: "palomino-sans-one", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin-bottom: 5%;
+}
+
+#conti_result {
+    margin: 4% 0 4% 0;
+}
+
+#coin_table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 5.2%;
+}
+
+#footer_text {
+    color: #ebf0ec;
+    font-family: "interstate", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 0.8vw;
+    padding: 1.5%;
+}
+
+/* class */
+.arrow_u {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    color: #473934;
+    text-decoration: none;
+}
+
+.arrow_u:before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-bottom: solid 4px #473934;
+    border-right: solid 4px #473934;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -6px;
+    transform: rotate(45deg);
+}
+
+.card_shadow {
+    width: 23vw;
+	height: calc(23vw * 1.413);
+    border-radius: 4%;
+    background-color: #473934;
+}
+
+.card_item {
+    width: 23vw;
+	height: calc(23vw * 1.413);
+    border-radius: 4%;
+    background-color: #9e7353;
+    box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.4);
+    transition: 0.2s all;
+}
+
+.card_item:hover {
+    transform: rotateZ(-12deg);
+}
+
+.card_mark {
+    color: #ebf0ec;
+    font-family: "palomino-sans-one", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    padding: 3% 0 3% 4%;
+}
+
+.card_img_area {
+    text-align: center;
+}
+
+.card_img {
+    width: 22vw;
+    height: auto;
+}
+
+.hand_img {
+    width: 20vw;
+    height: auto;
+}
+
+.card_name {
+    color: #ebf0ec;
+    font-family: "palomino-sans-one", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5vw;
+    letter-spacing: 8px;
+    text-align: center;
+    padding: 3% 0 3% 0;
+}
+
+.card_text {
+    color: #ced9d5;
+    font-family: "interstate", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.2vw;
+    letter-spacing: 5px;
+    line-height: 125%;
+    text-align: center;
+    padding: 0 3.5% 3% 3.5%;
+}
+
+.result_text {
+    color: #5e4a43;
+    font-family: "interstate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 75%;
+    letter-spacing: 2%;
+}
+
+.coin {
+    background: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+    border-radius: 50%;
+    width: 4.5vw;
+    height: 4.5vw;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.coin_text {
+    color: #ced9d5;
+    font-family: "interstate", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 32px;
+    letter-spacing: 5px;
+}
+
+.coin_tb_td {
+    padding: 1%;
+}
+
+.hidden_item {
+    display: none;
+}
+
+.selected_area {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+}
+
+/* SELECTED スタンプ */
+.selected_item1 {
+    position: absolute;
+    top: calc(56 / 1200 * 100vw);
+    left: calc(215 / 1200 * 100vw);
+}
+
+.selected_item2 {
+    position: absolute;
+    top: calc(56 / 1200 * 100vw);
+    left: calc(613.5 / 1200 * 100vw);
+}
+
+.selected_item3 {
+    position: absolute;
+    top: calc(56 / 1200 * 100vw);
+    left: calc(1011.2 / 1200 * 100vw);
+}
+
+.selected_img {
+    width: 13vw;
+    height: auto;
+}

@@ -1,0 +1,461 @@
+/* タブレット用CSS */
+@media screen and ( max-width : 1500px )
+{
+    main {
+        padding: 0 3% 0 3%;
+    }
+
+    /* id */
+    #opponent_card {
+        padding: 3.5%;
+    }
+
+    #judgment {
+        padding: 3.5%;
+    }
+    
+    #result {
+        color: #d7c3a2;
+        font-family: "palomino-sans-one", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+
+    /* class */
+    .card_total {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card_shadow {
+        width: 25vw;
+        height: calc(25vw * 1.413);
+    }
+
+    .card_item {
+        width: 25vw;
+        height: calc(25vw * 1.413);
+    }
+
+    .card_img {
+        width: 23.8vw;
+        height: auto;
+    }
+
+    .result_text {
+        font-size: 68%;
+    }
+
+    /* SELECTED スタンプ */
+    .selected_item1 {
+        top: calc(70 / 1200 * 100vw);
+        left: calc(215 / 1200 * 100vw);
+    }
+    
+    .selected_item2 {
+        top: calc(70 / 1200 * 100vw);
+        left: calc(626 / 1200 * 100vw);
+    }
+    
+    .selected_item3 {
+        top: calc(70 / 1200 * 100vw);
+        left: calc(1032 / 1200 * 100vw);
+    }
+}
+
+@media screen and ( max-width : 1200px )
+{
+    main {
+        padding: 0 3% 0 3%;
+    }
+
+    /* id */
+    #title {
+        font-size: 70px;
+        letter-spacing: 8px;
+    }
+
+    #arrow_total {
+        margin: 0 0 9% 0;
+    }
+
+    #opponent {
+        font-size: 48px;
+        letter-spacing: 5px;
+    }
+
+    #result {
+        font-size: 48px;
+        letter-spacing: 5px;
+    }
+
+    #resula_area {
+        margin: 0 0 5% 0;
+    }
+
+    #opponent_card {
+        width: 100%;
+        height: 5.8vw;
+        margin-bottom: 10%;
+        padding: 4.5%;
+    }
+
+    #judgment {
+        width: 100%;
+        height: 5.8vw;
+        padding: 4.5%;
+    }
+
+    #coin_area {
+        margin: 0 0 5% 0;
+    }
+
+    #coin_title {
+        font-size: 48px;
+        letter-spacing: 5px;
+    }
+
+    /* class */
+    .coin_text {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+
+    .card_total {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card_shadow {
+        width: 28vw;
+        height: calc(28vw * 1.413);
+    }
+
+    .card_item {
+        width: 28vw;
+        height: calc(28vw * 1.413);
+    }
+
+    .card_mark {
+        font-size: 3.5vw;
+    }
+
+    .card_img {
+        width: 26.5vw;
+        height: auto;
+    }
+
+    .result_text {
+        font-size: 65%;
+    }
+
+    .arrow_u:before {
+        width: 39px;
+        height: 39px;
+        border-bottom: solid 4px #473934;
+        border-right: solid 4px #473934;
+    }
+
+    /* SELECTED スタンプ */
+    .selected_item1 {
+        top: calc(65 / 1200 * 100vw);
+        left: calc(247 / 1200 * 100vw);
+    }
+    
+    .selected_item2 {
+        top: calc(65 / 1200 * 100vw);
+        left: calc(641 / 1200 * 100vw);
+    }
+    
+    .selected_item3 {
+        top: calc(65 / 1200 * 100vw);
+        left: calc(1028 / 1200 * 100vw);
+    }
+}
+
+@media screen and ( max-width : 900px )
+{
+    main {
+        padding: 0 3% 0 3%;
+    }
+
+    /* id */
+    #title {
+        font-size: 65px;
+        letter-spacing: 5px;
+    }
+    
+    #circle {
+        width: 3vw;
+        height: 3vw;
+    }
+    
+    #square {
+        width: 3vw;
+        height: 3vw;
+    }
+    
+    #triangle {
+        border-left: 1.7vw solid transparent;
+        border-right: 1.7vw solid transparent;
+        border-bottom: 3.4vw solid #ced9d5;
+    }
+
+    #arrow_total {
+        margin: 0 0 9.5% 0;
+    }
+
+    #opponent {
+        font-size: 45px;
+        letter-spacing: 3px;
+    }
+
+    #result {
+        font-size: 45px;
+        letter-spacing: 3px;
+    }
+
+    #opponent_card {
+        width: 100%;
+        height: 6.8vw;
+        margin-bottom: 10%;
+    }
+
+    #judgment {
+        width: 100%;
+        height: 6.8vw;
+    }
+
+    #coin_title {
+        font-size: 45px;
+        letter-spacing: 3px;
+    }
+
+    /* class */
+    .coin_text {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    .card_total {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card_shadow {
+        width: 29vw;
+        height: calc(29vw * 1.413);
+    }
+
+    .card_item {
+        width: 29vw;
+        height: calc(29vw * 1.413);
+    }
+
+    .card_mark {
+        font-size: 4.5vw;
+    }
+
+    .card_img {
+        width: 27vw;
+        height: auto;
+    }
+
+    .result_text {
+        font-size: 63%;
+    }
+
+    .arrow_u:before {
+        width: 28px;
+        height: 28px;
+        border-bottom: solid 3.5px #473934;
+        border-right: solid 3.5px #473934;
+    }
+
+    /* SELECTED スタンプ */
+    .selected_item1 {
+        top: calc(80 / 1200 * 100vw);
+        left: calc(258 / 1200 * 100vw);
+    }
+    
+    .selected_item2 {
+        top: calc(80 / 1200 * 100vw);
+        left: calc(645 / 1200 * 100vw);
+    }
+    
+    .selected_item3 {
+        top: calc(80 / 1200 * 100vw);
+        left: calc(1020 / 1200 * 100vw);
+    }
+}
+
+/* スマホ用CSS */
+@media screen and ( max-width : 600px )
+{
+    main {
+        padding: 0 15% 0 15%;
+    }
+
+    /* id */
+    #title {
+        font-size: 73px;
+        letter-spacing: 4.5px;
+        margin: 4% 2% 10% 2%;
+    }
+
+    #card_total {
+        margin: 0;
+    }
+
+    #circle {
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    #square {
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    #triangle {
+        border-left: 2.7vw solid transparent;
+        border-right: 2.7vw solid transparent;
+        border-bottom: 5.4vw solid #ced9d5;
+    }
+
+    #arrow_total {
+        margin: 0 0 20% 0;
+    }
+
+    #resula_area {
+        width: 100%;
+        margin: 10% 0 10% 0;
+    }
+    
+    #coin_area {
+        width: 100%;
+        margin: 0 0 15% 0;
+    }
+
+    #opponent_card {
+        width: 100%;
+        height: 13vw;
+        margin-bottom: 10%;
+    }
+
+    #judgment {
+        width: 100%;
+        height: 13vw;
+    }
+
+    #opponent {
+        font-size: 50px;
+        letter-spacing: 4px;
+    }
+
+    #result {
+        font-size: 50px;
+        letter-spacing: 4px;
+    }
+
+    #coin_title {
+        font-size: 50px;
+        letter-spacing: 4px;
+    }
+
+    #footer_text {
+        font-size: 3vw;
+        padding: 3%;
+    }
+
+    /* class */
+    .coin_text {
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
+
+    .card_total {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card_shadow {
+        width: 72vw;
+        height: calc(72vw * 1.413);
+        margin: 0 0 13% 0;
+    }
+
+    .card_item {
+        width: 72vw;
+        height: calc(72vw * 1.413);
+        margin: 0 0 13% 0;
+    }
+
+    .card_mark {
+        font-size: 10vw;
+    }
+
+    .card_img {
+        width: 68.5vw;
+        height: auto;
+    }
+
+    .card_name {
+        font-size: 10vw;
+        letter-spacing: 8px;
+        padding: 4% 0 4% 0;
+    }
+    
+    .card_text {
+        font-size: 4vw;
+        letter-spacing: 4px;
+        line-height: 125%;
+    }
+
+    .hand_img {
+        width: 60vw;
+        height: auto;
+    }
+
+    .coin {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .coin_tb_td {
+        padding: 1.5%;
+    }
+
+    .selected_item1 {
+        position: absolute;
+        top: calc(150 / 1200 * 100vw);
+        left: calc(630 / 1200 * 100vw);
+    }
+    
+    .selected_item2 {
+        position: absolute;
+        top: calc(1480 / 1200 * 100vw);
+        left: calc(630 / 1200 * 100vw);
+    }
+    
+    .selected_item3 {
+        position: absolute;
+        top: calc(2820 / 1200 * 100vw);
+        left: calc(630 / 1200 * 100vw);
+    }
+
+    .selected_img {
+        width: 43vw;
+        height: auto;
+    }
+
+    .result_text {
+        font-size: 78%;
+    }
+}
